@@ -1,0 +1,12 @@
+@import "../connect.scss";
+
+.ImgWrapper {
+  @include position($p: absolute, $t: 0, $l: 0);
+  @include boxSize($w: 100%, $h: 100%);
+  z-index: -1;
+
+  img {
+    @include boxSize($w: 100%, $h: 100%);
+    -webkit-filter: grayscale(85%);
+  }
+}

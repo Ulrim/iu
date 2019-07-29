@@ -1,0 +1,17 @@
+@import "../connect.scss";
+
+.TextWrapper {
+  @include position($p: absolute, $t: 0, $l: 0);
+  @include boxSize($w: 90%, $h: 90%);
+  color: #eef2f3;
+  text-shadow: 3px 1px 10px black;
+  padding: 10px;
+
+  .title {
+    font-size: 10rem;
+  }
+
+  .descriptions {
+    font-size: 3rem;
+  }
+}

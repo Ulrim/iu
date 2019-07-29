@@ -1,0 +1,12 @@
+@mixin position($p: static, $t: null, $r: null, $b: null, $l: null) {
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin boxSize($w: null, $h: null) {
+  width: $w;
+  height: $h;
+}

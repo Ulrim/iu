@@ -1,0 +1,41 @@
+@import "../connect.scss";
+
+.NavWrapper {
+  @include position($p: absolute, $b: 0, $r: 0);
+  @include boxSize($w: 95%, $h: 100px);
+  max-width: 1000px;
+  border: 2px solid red;
+  overflow: scroll;
+
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .NavWrapperItem {
+    @include position($p: absolute, $t: 50%, $r: 0);
+    @include boxSize($w: 200px, $h: 75px);
+    transform: translateY(-50%);
+    border: 2px solid rgb(255, 255, 255);
+
+    display: flex;
+    font-size: 1.5rem;
+    text-align: center;
+
+    div {
+      @include boxSize($w: 100%);
+      margin-top: auto;
+      margin-bottom: auto;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
