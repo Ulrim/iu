@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavWrapperItem = ({ children, left }) => (
+const NavWrapperItem = ({ children, left, color }) => (
   <>
     <div
       className="NavWrapperItem"

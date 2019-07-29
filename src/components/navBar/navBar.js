@@ -13,12 +13,17 @@ const Item = [
 
 const gap = 250;
 
-const NavBar = () => {
+const NavBar = ({ color }) => {
   return (
     <NavWrapper>
       {Item.map((item, i) => (
         <NavWrapperItem key={`item_${item.name}`} left={`${i * gap}px`}>
-          <Link to={`/${item.name.replace(" ", "").replace(" ", "")}`}>
+          <Link
+            to={`/${item.name.replace(" ", "").replace(" ", "")}`}
+            style={{
+              color: color
+            }}
+          >
             {item.name}
           </Link>
         </NavWrapperItem>

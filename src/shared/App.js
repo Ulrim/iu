@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import {
   Home,
   GrowingUp,
@@ -9,24 +9,20 @@ import {
   Palette
 } from "../pages";
 import "./App.css";
+import { RouterTransition } from "../components";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route exact path="/" component={Home} />
-
-        <Switch>
-          <Route exact path="/GrowingUp" component={GrowingUp} />
-          <Route exact path="/LastFantasy" component={LastFantasy} />
-          <Route exact path="/ModemTimes" component={ModemTimes} />
-          <Route
-            exact
-            path="/ModemTimesEpilogue"
-            component={ModemTimesEpilogue}
-          />
+        <RouterTransition>
+          <Route path="/GrowingUp" component={GrowingUp} />
+          <Route path="/LastFantasy" component={LastFantasy} />
+          <Route path="/ModemTimes" component={ModemTimes} />
+          <Route path="/ModemTimesEpilogue" component={ModemTimesEpilogue} />
           <Route exact path="/Palette" component={Palette} />
-        </Switch>
+          <Route path="/" component={Home} />
+        </RouterTransition>
       </div>
     );
   }
