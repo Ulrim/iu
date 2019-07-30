@@ -1,9 +1,9 @@
+@import "../connect.scss";
+
 .fade-enter,
 .fade-exit {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 1s ease opacity;
+  @include position($p: absolute, $t: 0, $l: 0);
+  transition: all 1s ease;
 }
 .fade-enter,
 .fade-exit-active {

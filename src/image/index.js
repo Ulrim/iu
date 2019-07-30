@@ -1,11 +1,11 @@
 const Images = {
   main: {
-    home: require("./main/1.jpg"),
-    GrowingUp: require("./main/2.jpg"),
-    LastFantasy: require("./main/3.jpg"),
-    ModemTimes: require("./main/4.jpg"),
-    ModemTimesEpilogue: require("./main/1.jpg"),
-    Palette: require("./main/2.jpg")
+    home: require("./main/iu_home.gif"),
+    GrowingUp: require("./main/iu_home.gif"),
+    LastFantasy: require("./main/iu_home.gif"),
+    ModemTimes: require("./main/iu_home.gif"),
+    ModemTimesEpilogue: require("./main/iu_home.gif"),
+    Palette: require("./main/iu_home.gif")
   }
 };
 

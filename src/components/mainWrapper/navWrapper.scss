@@ -2,10 +2,10 @@
 
 .NavWrapper {
   @include position($p: absolute, $b: 0, $r: 0);
-  @include boxSize($w: 95%, $h: 100px);
+  @include boxSize($w: 100%, $h: 100px);
   max-width: 1000px;
-  border: 2px solid red;
-  overflow: scroll;
+  // border: 2px solid red;
+  // overflow: scroll;
 
   cursor: grab;
 
@@ -19,12 +19,12 @@
 
   .NavWrapperItem {
     @include position($p: absolute, $t: 50%, $r: 0);
-    @include boxSize($w: 200px, $h: 75px);
+    @include boxSize($w: 150px, $h: 75px);
     transform: translateY(-50%);
-    border: 2px solid rgb(255, 255, 255);
+    // border: 2px solid rgb(255, 255, 255);
 
     display: flex;
-    font-size: 1.5rem;
+    font-size: 15pt;
     text-align: center;
 
     div {
@@ -33,6 +33,7 @@
       margin-bottom: auto;
 
       a {
+        font-family: "Shadows Into Light", cursive;
         color: white;
         text-decoration: none;
       }

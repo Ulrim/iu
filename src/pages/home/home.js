@@ -1,10 +1,10 @@
 import React from "react";
-import { MainWrapper, ImgWrapper, TextWrapper, NavBar } from "../../components";
+import { MainWrapper, ImgWrapper, NavBar, TextWrapper } from "../../components";
 import Images from "../../image";
 
 const Content = {
-  title: "My Home",
-  descriptions: <div>내 집이고 내 집이지!! my Home</div>,
+  title: "IU",
+  descriptions: "",
   color: ""
 };
 

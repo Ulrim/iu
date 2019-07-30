@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  MainWrapper,
-  ImgWrapper,
-  TextWrapper,
-  NavBar
-} from "../../../components";
+import { MainWrapper, ImgWrapper, NavBar, DescBar } from "../../../components";
 import Images from "../../../image";
 
 const Content = {
@@ -16,7 +11,7 @@ const Content = {
 const Palette = () => (
   <MainWrapper>
     <ImgWrapper img={Images.main.Palette} />
-    <TextWrapper title={Content.title} descriptions={Content.descriptions} />
+    <DescBar title={Content.title} descriptions={Content.descriptions} />
     <NavBar color={Content.color} />
   </MainWrapper>
 );

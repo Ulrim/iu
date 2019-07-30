@@ -4,4 +4,8 @@
   @include position(absolute, $t: 0, $l: 0);
   @include boxSize($w: 100%, $h: 100%);
   overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

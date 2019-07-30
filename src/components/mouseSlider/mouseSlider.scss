@@ -1,0 +1,11 @@
+@import "../connect.scss";
+
+.MouseSlider {
+  @include position($p: absolute, $t: 0, $l: 0);
+  @include boxSize($w: 100%, $h: 100%);
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
