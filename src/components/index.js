@@ -9,3 +9,4 @@ export {
 } from "./routerTransition/routerTransition";
 export { default as MouseSlider } from "./mouseSlider/mouseSlider";
 export { default as DescBar } from "./descBar/descBar";
+export { default as VideoPlayer } from "./videoPlayer/videoPlayer";

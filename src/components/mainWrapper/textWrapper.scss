@@ -1,11 +1,4 @@
 @import "../connect.scss";
-@font-face {
-  font-family: "KimNamyun";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KimNamyun.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 // font-family: 'Righteous', cursive;
 // font-family: 'Shadows Into Light', cursive;
 // font-family: 'Permanent Marker', cursive;
@@ -14,7 +7,7 @@
 // font-family: 'Fugaz One', cursive;
 
 .TextWrapper {
-  @include position($p: absolute, $t: 0, $l: 0);
+  @include position($p: absolute, $t: 0, $r: 0);
   // @include boxSize($w: 90%, $h: 90%);
   color: #eef2f3;
   text-shadow: 3px 1px 10px black;

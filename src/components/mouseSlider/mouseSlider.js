@@ -31,7 +31,11 @@ const MouseSlider = ({ children }) => {
     });
   }, []);
 
-  return <div className="MouseSlider">{children}</div>;
+  return (
+    <div id="ref" className="MouseSlider">
+      {children}
+    </div>
+  );
 };
 
 export default MouseSlider;

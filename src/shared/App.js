@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import {
   Home,
-  Album01,
+  LastAndFound,
   LastFantasy,
   ModemTimes,
   ModemTimesEpilogue,
@@ -19,7 +19,7 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Switch>
           <RouterTransition>
-            <Route path="/LastAndFound" component={Album01} />
+            <Route path="/LastAndFound" component={LastAndFound} />
             <Route path="/LastFantasy" component={LastFantasy} />
             <Route path="/ModemTimes" component={ModemTimes} />
             <Route path="/ModemTimesEpilogue" component={ModemTimesEpilogue} />
