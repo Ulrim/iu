@@ -1,11 +1,38 @@
 @import "../connect.scss";
 
 .VideoPlayer {
-  position: relative;
-  z-index: -2;
+  @include position($p: absolute);
+  @include boxSize(100%, 100%);
   // padding-top: 56.25%;
   /* Player ratio: 100 / (1280 / 720) */
-  .VideoPlayer__player {
-    @include position($p: absolute, $t: 0, $l: 0);
+  .VideoPlayer__main {
+    @include position($p: absolute);
+    @include boxSize(0px, 0px);
+    z-index: -2;
+
+    .VideoPlayer__main__player {
+      @include position($p: absolute, $t: 0, $l: 0);
+    }
+  }
+
+  .VideoPlayer__playerBar {
+    @include position($p: absolute, $b: 0, $l: -5px);
+    border-radius: 50px;
+    transition: all 0.5s;
+    background: #833ab4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    z-index: 10;
   }
 }

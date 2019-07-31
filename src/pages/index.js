@@ -1,8 +1,19 @@
 export { default as Home } from "./home/home";
 export { default as Loading } from "./loading/loading";
 
-export { default as LastAndFound } from "./home/sub/LastAndFound";
+export { default as LostChild } from "./home/sub/LostChild";
+export { default as Parting } from "./home/sub/Parting";
+export { default as Story } from "./home/sub/Story";
 export { default as LastFantasy } from "./home/sub/LastFantasy";
-export { default as ModemTimes } from "./home/sub/ModemTimes";
-export { default as ModemTimesEpilogue } from "./home/sub/ModemTimesEpilogue";
+export { default as Day } from "./home/sub/Day";
+export { default as ModernTimes } from "./home/sub/ModernTimes";
+export { default as ModernTimesEpilogue } from "./home/sub/ModernTimesEpilogue";
+export { default as Flower } from "./home/sub/Flower";
+export { default as Sogyeokdong } from "./home/sub/Sogyeokdong";
+export { default as Mind } from "./home/sub/Mind";
+export { default as ChatShire } from "./home/sub/ChatShire";
+export { default as NightLetter } from "./home/sub/NightLetter";
 export { default as Palette } from "./home/sub/Palette";
+export { default as Flowertwo } from "./home/sub/Flowertwo";
+export { default as Flowertwos } from "./home/sub/Flowertwos";
+export { default as Beep } from "./home/sub/Beep";

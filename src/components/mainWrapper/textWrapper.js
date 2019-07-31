@@ -1,12 +1,11 @@
 import React from "react";
 import "./textWrapper.scss";
 
-const TextWrapper = ({ color, title, descriptions }) => (
+const TextWrapper = ({ title, descriptions }) => (
   <>
     <div
       className="TextWrapper"
       style={{
-        color: color,
         cursor: window.location.pathname === "/" ? "default" : "pointer"
       }}
     >

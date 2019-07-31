@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { MainWrapper, ImgWrapper, NavBar, DescBar } from "../../../components";
-import Images from "../../../image";
+import {
+  MainWrapper,
+  ImgWrapper,
+  NavBar,
+  DescBar,
+  VideoPlayer
+} from "../../../components";
+import Content from "../content";
 
-const Content = {
-  title: "Last Fantasy",
-  descriptions: <div>빠밤</div>
-};
+const { video, image, title, descriptions, url } = Content.LastFantasy;
 
 const LastFantasy = () => {
   const [isMount, setIsMount] = useState(false);
   const pathName = window.location.pathname;
 
   useEffect(() => {
-    if (pathName === `/${Content.title.replace(" ", "").replace(" ", "")}`) {
+    if (pathName === `/${url.replace(" ", "").replace(" ", "")}`) {
       setIsMount(true);
     }
 
@@ -23,8 +26,9 @@ const LastFantasy = () => {
 
   return (
     <MainWrapper>
-      <ImgWrapper img={Images.main.LastFantasy} />
-      <DescBar title={Content.title} descriptions={Content.descriptions} />
+      <VideoPlayer url={video.url} playing={video.playing} next={video.next} />
+      <ImgWrapper img={image} />
+      <DescBar title={title} descriptions={descriptions} />
       <NavBar Ref={isMount} />
     </MainWrapper>
   );

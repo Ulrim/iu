@@ -2,14 +2,7 @@ import React, { useRef, useEffect } from "react";
 import NavWrapperItem from "../mainWrapper/navWrapperItem";
 import { Link } from "react-router-dom";
 import { NavWrapper, MouseSlider } from "..";
-
-const Item = [
-  { name: "Last And Found" },
-  { name: "Last Fantasy" },
-  { name: "Modem Times" },
-  { name: "Modem Times Epilogue" },
-  { name: "Palette" }
-];
+import Item from "./item";
 
 const gap = 190;
 
@@ -18,7 +11,7 @@ const scrollToRef = ref => {
   document.getElementById("ref").scrollTo(ref.current.offsetLeft, 0);
 };
 
-const NavBar = ({ color, Ref }) => {
+const NavBar = ({ Ref }) => {
   const myRef = useRef(null);
   const executeScroll = () => scrollToRef(myRef);
   const pathName = window.location.pathname;
@@ -26,6 +19,7 @@ const NavBar = ({ color, Ref }) => {
   useEffect(() => {
     if (Ref === true) {
       executeScroll();
+      console.log("실행");
     }
   }, [Ref]);
 
@@ -33,16 +27,16 @@ const NavBar = ({ color, Ref }) => {
     <NavWrapper>
       <MouseSlider>
         {Item.map((item, i) => (
-          <NavWrapperItem key={`item_${item.name}`} left={`${i * gap}px`}>
+          <NavWrapperItem key={`item_${item.url}`} left={`${i * gap}px`}>
             <Link
-              to={`/${item.name.replace(" ", "").replace(" ", "")}`}
+              to={`/${item.url.replace(" ", "").replace(" ", "")}`}
               style={{
                 fontWeight:
-                  pathName === `/${item.name.replace(" ", "").replace(" ", "")}`
+                  pathName === `/${item.url.replace(" ", "").replace(" ", "")}`
                     ? "bold"
                     : "",
                 color:
-                  pathName === `/${item.name.replace(" ", "").replace(" ", "")}`
+                  pathName === `/${item.url.replace(" ", "").replace(" ", "")}`
                     ? "#EECDA3"
                     : ""
               }}
@@ -53,17 +47,16 @@ const NavBar = ({ color, Ref }) => {
         ))}
         {Item.map((item, i) => (
           <div
-            key={`item_${item.name}_div`}
+            key={`item_${item.url}_div`}
             ref={
-              pathName === `/${item.name.replace(" ", "").replace(" ", "")}`
+              pathName === `/${item.url.replace(" ", "").replace(" ", "")}`
                 ? myRef
                 : null
             }
             style={{
               position: "absolute",
               border:
-                pathName ===
-                `/${Item[i].name.replace(" ", "").replace(" ", "")}`
+                pathName === `/${Item[i].url.replace(" ", "").replace(" ", "")}`
                   ? "2px solid red"
                   : "2px solid blue",
               left: `${i * gap}px`

@@ -2,8 +2,8 @@
 
 .NavWrapper {
   @include position($p: absolute, $b: 0, $r: 0);
-  @include boxSize($w: 100%, $h: 100px);
-  max-width: 1000px;
+  @include boxSize($w: 98%, $h: 100px);
+  // max-width: 1000px;
   // border: 2px solid red;
   // overflow: scroll;
 
@@ -36,9 +36,12 @@
         &:hover {
           color: #eecda3;
         }
-        font-family: "Shadows Into Light", cursive;
-        color: white;
+        // font-family: "Shadows Into Light", cursive;
+        font-family: "KCC-eunyoung";
+        font-size: 30px;
+        color: #aa076ce1;
         text-decoration: none;
+        text-shadow: 2px 1px 3px #61045f;
       }
     }
   }

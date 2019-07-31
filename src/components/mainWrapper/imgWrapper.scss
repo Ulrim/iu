@@ -7,6 +7,6 @@
 
   img {
     @include boxSize($w: 100%, $h: 100%);
-    -webkit-filter: grayscale(10%);
+    -webkit-filter: grayscale(80%);
   }
 }
