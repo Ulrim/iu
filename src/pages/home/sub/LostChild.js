@@ -27,7 +27,6 @@ const LostChild = () => {
   return (
     <MainWrapper>
       <VideoPlayer url={video.url} playing={video.playing} next={video.next} />
-      <ImgWrapper img={image} />
       <DescBar title={title} descriptions={descriptions} />
       <NavBar Ref={isMount} />
     </MainWrapper>
